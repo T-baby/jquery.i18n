@@ -1,6 +1,6 @@
 ﻿# jquery.i18n.js
 
----
+[中文文档][3]
 
 A lightweight, internationalization (i18n) plugin based on jQuery.
 
@@ -114,3 +114,4 @@ HTML element will be the default placeholder, value, html translation with the r
 
   [1]: https://github.com/T-baby/
   [2]: https://github.com/NiroDu
+  [3]: https://github.com/ZOMAKE/jquery.i18n/blob/master/README-CN.md
