@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <!-- 请在服务器端运行该程序以获得正确路径 -->
+
+    <head>
+        <meta charset="utf-8">
+        <title>i18n Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <!-- 显示的主体内容 -->
+        <div i18n="footer.about">About</div>
+        <div i18n="footer.contact">Contact us</div>
+        <!-- 切换按钮 -->
+        <button type="button" class="chinese">切换为中文</button>
+        <button type="button" class="english">switch to english</button>
+    </body>
+
+    <script src="jquery.min.js"></script>
+    <script src="../jquery.i18n.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*默认语言*/
+            var defaultLang = "cn";
+            $("[i18n]").i18n({
+                defaultLang: defaultLang,
+                filePath: "../i18n/",
+                filePrefix: "i18n_",
+                fileSuffix: "",
+                forever: true,
+                callback: function() {
+                    console.log("i18n has been completed.");
+                }
+            });
+            /*切换为中文 - 按钮*/
+            $(".chinese").click(function() {
+                $("[i18n]").i18n({
+                    defaultLang: "cn",
+                });
+            });
+            /*切换为英文 - 按钮*/
+            $(".english").click(function() {
+                $("[i18n]").i18n({
+                    defaultLang: "en",
+                });
+            });
+
+        });
+    </script>
+
+</html>
