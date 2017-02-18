@@ -25,6 +25,9 @@ Then, Include `jquery.i18n.js` after the jQuery library :
 ```
 
 ## Usage
+
+> note! Please run the program on the server. Because XMLHttpRequest cannot load file:xxx.
+
 First, create a new `i18n` folder in the project, Place the `i18n_xx.json` language files in different languages under this folder.
 (You can also customize the beginning and end of the file name, such as `BaiduCnLang.js`, the following example to `i18n_` for the file name at the beginning.)
 
@@ -59,7 +62,7 @@ Finally, execute the following method in the script to initialize the plugin:
 ```JS
 $("[i18n]").i18n({
     defaultLang: "en",
-    filePath: "/i18n/",
+    filePath: "/i18n/", //note! To configure the correct path for the language file
     filePrefix: "i18n_",
     fileSuffix: "",
     forever: true,

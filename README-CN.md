@@ -24,6 +24,8 @@
 ```
 
 ## 使用方法
+> 注意！请在服务器端运行该程序。因为 XMLHttpRequest cannot load file:xxx.
+
 首先在项目中新建 `i18n` 文件夹，在此文件夹下放置不同语言版本的 `i18n_xx.json` 语言文件。（您也可以自定义文件名的开头和结尾如BaiduCnLang.js，下面的示例中以i18n_为文件名开头）
 
 在需要使用国际化功能的DOM结构处引入i18n属性（i18n中的value为语言文件中key，可自定义）：
@@ -56,7 +58,7 @@
 ```JS
 $("[i18n]").i18n({
     defaultLang: "en",
-    filePath: "/i18n/",
+    filePath: "/i18n/", //注意！要配置好语言文件的正确路径
     filePrefix: "i18n_",
     fileSuffix: "",
     forever: true,
